@@ -1,26 +1,34 @@
 # ember-cli-lazysizes
 
-This README outlines the details of collaborating on this Ember addon.
+The Ember.js integration of [lazysizes](https://github.com/aFarkas/lazysizes) loader for images (responsive and regular), iframes and more without any configuration. [Demo app](http://afarkas.github.io/lazysizes) from original repository.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-lazysizes`
-* `npm install`
+```bash
+ember install ember-cli-lazysizes
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Usage is simple, all you have to do is to assign the class (default: `'lazyload'`) to image tag in your template:
 
-## Running Tests
+```html
+<img src="./tomster.png" alt="tomster" class="lazyload">
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+and the response is the custom generated class (default: `'lazyloaded'`):
 
-## Building
+```html
+<img src="./tomster.png" alt="tomster" class=" lazyloaded">
+```
 
-* `ember build`
+All defaults can be overwritten in `ember-cli-build.js` file:
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```js
+'ember-cli-lazysizes': {
+  lazyClass: 'lazy',
+  loadedClass: 'loaded'
+}
+```
+
+Find more about lazysizes' JS API on [original repo](https://github.com/aFarkas/lazysizes#js-api).
