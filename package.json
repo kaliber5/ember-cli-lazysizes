@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "lazysizes"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Radovan Hajdukovic <hajdukovic.radovan@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -19,7 +20,9 @@
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "broccoli-stew": "^1.5.0",
+    "ember-cli-babel": "^6.6.0",
+    "lazysizes": "^4.0.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
