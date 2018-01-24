@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kaliber5/ember-cli-lazysizes.svg?branch=master)](https://travis-ci.org/kaliber5/ember-cli-lazysizes)
+
 # ember-cli-lazysizes
 
 The Ember.js integration of [lazysizes](https://github.com/aFarkas/lazysizes) loader for images (responsive and regular), iframes and more without any required configuration. See the [Demo app](http://afarkas.github.io/lazysizes) from the original repository.
