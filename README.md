@@ -1,6 +1,6 @@
 # ember-cli-lazysizes
 
-The Ember.js integration of [lazysizes](https://github.com/aFarkas/lazysizes) loader for images (responsive and regular), iframes and more without any configuration. [Demo app](http://afarkas.github.io/lazysizes) from original repository.
+The Ember.js integration of [lazysizes](https://github.com/aFarkas/lazysizes) loader for images (responsive and regular), iframes and more without any required configuration. See the [Demo app](http://afarkas.github.io/lazysizes) from the original repository.
 
 ## Installation
 
@@ -10,17 +10,16 @@ ember install ember-cli-lazysizes
 
 ## Usage
 
-Usage is simple, all you have to do is to assign the class (default: `'lazyload'`) to image tag in your template:
+Usage is simple, all you have to do is to assign the class (default: `'lazyload'`) to any image tag in your template,
+and use `data-src` or `data-srcset` attributes instead of `src` or `srcset`:
 
 ```html
-<img src="./tomster.png" alt="tomster" class="lazyload">
+<img data-src="tomster.png" alt="tomster" class="lazyload">
 ```
 
-and the response is the custom generated class (default: `'lazyloaded'`):
+See the lazysizes' [markup API](https://github.com/aFarkas/lazysizes#markup-api) for all the supported loading patterns.
 
-```html
-<img src="./tomster.png" alt="tomster" class=" lazyloaded">
-```
+## Configuration
 
 All defaults can be overwritten in `ember-cli-build.js` file:
 
@@ -31,4 +30,4 @@ All defaults can be overwritten in `ember-cli-build.js` file:
 }
 ```
 
-Find more about lazysizes' JS API on [original repo](https://github.com/aFarkas/lazysizes#js-api).
+Find more about lazysizes' configuration options on its [original repo](https://github.com/aFarkas/lazysizes#js-api---options).
