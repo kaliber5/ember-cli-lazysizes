@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/kaliber5/ember-cli-lazysizes.svg?branch=master)](https://travis-ci.org/kaliber5/ember-cli-lazysizes)
+[![npm](https://img.shields.io/npm/v/ember-cli-lazysizes.svg)](http://npm.im/ember-cli-lazysizes)
 
 # ember-cli-lazysizes
 
