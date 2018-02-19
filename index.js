@@ -6,10 +6,6 @@ const path = require('path');
 module.exports = {
   name: 'ember-cli-lazysizes',
 
-  isDevelopingAddon() {
-    return true;
-  },
-
   included(app) {
     this._super.included.apply(this, arguments);
 
