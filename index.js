@@ -6,10 +6,21 @@ const path = require('path');
 module.exports = {
   name: 'ember-cli-lazysizes',
 
+  isDevelopingAddon() {
+    return true;
+  },
+
   included(app) {
     this._super.included.apply(this, arguments);
 
     this.addonOptions = app.options[this.name] || {};
+
+    if (this.addonOptions.plugins) {
+      this.addonOptions.plugins.forEach((plugin) => {
+        this.import(`node_modules/lazysizes/plugins/${plugin}/ls.${plugin}.js`);
+      });
+      delete this.addonOptions.plugins;
+    }
     this.import('vendor/lazysizes.js');
   },
 
