@@ -37,14 +37,14 @@ Find more about lazysizes' configuration options on its [original repo](https://
 
 ### Plugins
 
-Lazysizes provides a number of plugins [markup API](https://github.com/aFarkas/lazysizes#available-plugins-in-this-repo). You can easily include the plugins you need through the `plugins` option.
+Lazysizes provides a number of [plugins](https://github.com/aFarkas/lazysizes#available-plugins-in-this-repo). You can easily include the plugins you need through the `plugins` option.
 
 ```js
 'ember-cli-lazysizes': {
   plugins: [
     'bgset',
-    'aspectrtio'
+    'aspectratio'
   ]
 }
 ```
-See [list of available plugins](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins)
+See the [list of available plugin-names](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins)
