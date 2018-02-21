@@ -16,20 +16,21 @@ module.exports = {
     delete this.addonOptions.plugins;
 
     this.plugins.forEach((plugin) => {
-      this.import(`vendor/plugins/${plugin}/ls.${plugin}.js`, { using: [ {transformation: 'fastboot-transform'}]});
+      this.import(`vendor/plugins/${plugin}/ls.${plugin}.js`, { using: [{ transformation: 'fastboot-transform' }] });
     });
 
-    this.import(`vendor/lazysizes.js`, { using: [{ transformation: 'inject-lazysizes-config'}, { transformation: 'fastboot-transform' }]});
+    this.import(`vendor/lazysizes.js`, { using: [{ transformation: 'inject-lazysizes-config' }] });
   },
 
   importTransforms() {
     return {
-      'fastboot-transform': transform,
       'inject-lazysizes-config': (tree) => {
-        return map(tree, (content) => {
-          return `window.lazySizesConfig = ${JSON.stringify(this.addonOptions)}; ${content}`;
-        });
-      }
+        return transform(map(tree, (content) => {
+          return `window.lazySizesConfig = ${JSON.stringify(this.addonOptions)};
+          ${content}`;
+        }));
+      },
+      'fastboot-transform': transform
     }
   },
 
