@@ -12,7 +12,7 @@ module.exports = {
   included() {
     this._super.included.apply(this, arguments);
 
-    let app = this._findHost.call(this);
+    let app = this._findHost();
 
     this.addonOptions = app.options[this.name] || {};
     this.plugins = this.addonOptions.plugins || [];
