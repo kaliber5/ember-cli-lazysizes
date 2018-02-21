@@ -19,13 +19,13 @@ module.exports = {
       this.import(`vendor/plugins/${plugin}/ls.${plugin}.js`, { using: [ {transformation: 'fastboot-transform'}]});
     });
 
-    this.import(`vendor/lazysizes.js`, { using: [{ transformation: 'inject-config'}, { transformation: 'fastboot-transform' }]});
+    this.import(`vendor/lazysizes.js`, { using: [{ transformation: 'inject-lazysizes-config'}, { transformation: 'fastboot-transform' }]});
   },
 
   importTransforms() {
     return {
       'fastboot-transform': transform,
-      'inject-config': (tree) => {
+      'inject-lazysizes-config': (tree) => {
         return map(tree, (content) => {
           return `window.lazySizesConfig = ${JSON.stringify(this.addonOptions)}; ${content}`;
         });
