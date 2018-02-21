@@ -2,6 +2,8 @@
 
 const map = require('broccoli-stew').map;
 const path = require('path');
+const find = require('broccoli-stew').find;
+const transform = require('fastboot-transform');
 
 module.exports = {
   name: 'ember-cli-lazysizes',
@@ -10,22 +12,36 @@ module.exports = {
     this._super.included.apply(this, arguments);
 
     this.addonOptions = app.options[this.name] || {};
+    this.plugins = this.addonOptions.plugins || [];
+    delete this.addonOptions.plugins;
 
-    if (this.addonOptions.plugins) {
-      this.addonOptions.plugins.forEach((plugin) => {
-        this.import(`node_modules/lazysizes/plugins/${plugin}/ls.${plugin}.js`);
-      });
-      delete this.addonOptions.plugins;
+    this.plugins.forEach((plugin) => {
+      this.import(`vendor/plugins/${plugin}/ls.${plugin}.js`, { using: [ {transformation: 'fastboot-transform'}]});
+    });
+
+    this.import(`vendor/lazysizes.js`, { using: [{ transformation: 'inject-config'}, { transformation: 'fastboot-transform' }]});
+  },
+
+  importTransforms() {
+    return {
+      'fastboot-transform': transform,
+      'inject-config': (tree) => {
+        return map(tree, (content) => {
+          return `window.lazySizesConfig = ${JSON.stringify(this.addonOptions)}; ${content}`;
+        });
+      }
     }
-    this.import('vendor/lazysizes.js');
   },
 
   treeForVendor() {
-    let lazySizesPath = path.dirname(require.resolve('lazysizes'));
+    let include = [];
 
-    return map(this.treeGenerator(lazySizesPath), 'lazysizes.js', (content) => `if (typeof FastBoot === 'undefined') {
-      window.lazySizesConfig = ${JSON.stringify(this.addonOptions)};
-      ${content}
-    }`);
+    let lazySizesPath = path.dirname(require.resolve('lazysizes'));
+    include.push('lazysizes.js');
+    this.plugins.forEach((plugin) => {
+      include.push(`plugins/${plugin}/ls.${plugin}.js`);
+    });
+
+    return find(this.treeGenerator(lazySizesPath), { include });
   }
 };

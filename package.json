@@ -22,7 +22,8 @@
   "dependencies": {
     "broccoli-stew": "^1.5.0",
     "ember-cli-babel": "^6.6.0",
-    "lazysizes": "^4.0.1"
+    "lazysizes": "^4.0.1",
+    "fastboot-transform": "^0.1.2"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
