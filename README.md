@@ -34,3 +34,17 @@ All defaults can be overwritten in `ember-cli-build.js` file:
 ```
 
 Find more about lazysizes' configuration options on its [original repo](https://github.com/aFarkas/lazysizes#js-api---options).
+
+### Plugins
+
+Lazysizes provides a number of [plugins](https://github.com/aFarkas/lazysizes#available-plugins-in-this-repo). You can easily include the plugins you need through the `plugins` option.
+
+```js
+'ember-cli-lazysizes': {
+  plugins: [
+    'bgset',
+    'aspectratio'
+  ]
+}
+```
+See the [list of available plugin-names](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins)

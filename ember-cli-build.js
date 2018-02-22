@@ -6,7 +6,10 @@ module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     // Add options here
     'ember-cli-lazysizes': {
-      lazyClass: 'lazy'
+      lazyClass: 'lazy',
+      plugins: [
+        'bgset'
+      ]
     }
   });
 
