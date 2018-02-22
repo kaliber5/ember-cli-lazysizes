@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-lazysizes",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Lazysizes for Ember.js applications.",
   "keywords": [
     "ember-addon",
