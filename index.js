@@ -9,8 +9,10 @@ const mergeTrees = require('broccoli-merge-trees');
 module.exports = {
   name: 'ember-cli-lazysizes',
 
-  included(app) {
+  included() {
     this._super.included.apply(this, arguments);
+
+    let app = this._findHost();
 
     this.addonOptions = app.options[this.name] || {};
     this.plugins = this.addonOptions.plugins || [];
