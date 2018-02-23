@@ -3,7 +3,7 @@
 
 # ember-cli-lazysizes
 
-The Ember.js integration of [lazysizes](https://github.com/aFarkas/lazysizes) loader for images (responsive and regular), iframes and more without any required configuration. See the [Demo app](http://afarkas.github.io/lazysizes) from the original repository.
+The Ember.js integration of [lazysizes](https://github.com/aFarkas/lazysizes) loader for images (responsive and regular), iframes and more without any required configuration. See the [demo app](http://afarkas.github.io/lazysizes) from the original repository.
 
 ## Installation
 
