@@ -26,7 +26,10 @@ module.exports = {
   },
 
   treeForVendor(tree) {
-    let trees = [tree];
+    let trees = [];
+    if (tree) {
+      trees.push(tree);
+    }
 
     let lazyNodeTree = this.treeGenerator(path.dirname(require.resolve('lazysizes')));
     if (this.plugins.length > 0) {
