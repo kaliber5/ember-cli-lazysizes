@@ -1,12 +1,13 @@
-import { test } from 'qunit';
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
+import { module, test } from 'qunit';
+import { visit } from '@ember/test-helpers';
+import { setupApplicationTest } from 'ember-qunit';
 
-moduleForAcceptance('Acceptance | lazysizes');
+module('Acceptance | lazysizes', function (hooks) {
+  setupApplicationTest(hooks);
 
-test('it creates the `lazySizes` global and overwrittes the `lazyClass`', function(assert) {
-  visit('/');
+  test('visiting /lazysizes', async function (assert) {
+    await visit('/');
 
-  andThen(function() {
     assert.ok(window.lazySizes);
     assert.equal(window.lazySizesConfig.lazyClass, 'lazy');
   });
