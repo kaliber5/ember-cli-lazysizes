@@ -7,7 +7,7 @@ const transform = require('fastboot-transform');
 const mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
-  name: 'ember-cli-lazysizes',
+  name: require('./package').name,
 
   included() {
     this._super.included.apply(this, arguments);

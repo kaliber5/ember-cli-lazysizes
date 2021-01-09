@@ -11,3 +11,4 @@ test('it creates the `lazySizes` global and overwrittes the `lazyClass`', functi
     assert.equal(window.lazySizesConfig.lazyClass, 'lazy');
   });
 });
+
