@@ -7,10 +7,8 @@ module.exports = function (defaults) {
     // Add options here
     'ember-cli-lazysizes': {
       lazyClass: 'lazy',
-      plugins: [
-        'bgset'
-      ]
-    }
+      plugins: ['bgset'],
+    },
   });
 
   /*

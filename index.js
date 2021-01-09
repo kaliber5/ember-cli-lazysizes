@@ -31,15 +31,23 @@ module.exports = {
       trees.push(tree);
     }
 
-    let lazyNodeTree = this.treeGenerator(path.dirname(require.resolve('lazysizes')));
+    let lazyNodeTree = this.treeGenerator(
+      path.dirname(require.resolve('lazysizes'))
+    );
     if (this.plugins.length > 0) {
-      let include = this.plugins.map((plugin) => `plugins/${plugin}/ls.${plugin}.js`);
+      let include = this.plugins.map(
+        (plugin) => `plugins/${plugin}/ls.${plugin}.js`
+      );
       trees.push(transform(find(lazyNodeTree, { include })));
     }
-    trees.push(transform(map(find(lazyNodeTree, 'lazysizes.js'), (content) => {
-      return `window.lazySizesConfig = ${JSON.stringify(this.addonOptions)};
+    trees.push(
+      transform(
+        map(find(lazyNodeTree, 'lazysizes.js'), (content) => {
+          return `window.lazySizesConfig = ${JSON.stringify(this.addonOptions)};
           ${content}`;
-    })));
+        })
+      )
+    );
     return mergeTrees(trees, { overwrite: true });
-  }
+  },
 };
