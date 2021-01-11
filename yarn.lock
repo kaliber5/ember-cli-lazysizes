@@ -8129,10 +8129,10 @@ lazy-cache@^2.0.2:
   dependencies:
     set-getter "^0.1.0"
 
-lazysizes@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.1.tgz#f450e36a995efb5817acb8c904f3d2f2efc29ffa"
-  integrity sha512-607dEMlbcnkny2lGYVqoA/rQO+WGpWh/BISeS1eLfT8nHQw6E+R8ybJoKKGVlZ2czKPTATrsU95f+nkwix0fXw==
+lazysizes@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.3.0.tgz#e31b40bc2500b45483251681c898bbb3ded744ac"
+  integrity sha512-h5i4WPc2FdeTOUHBcU7eyNnOULPCC90wVho+SQTZRh9Q8lev6P0yFwKq8rvfMdBvsKsCyDQBdqoBng9FYbcR/g==
 
 leek@0.0.24:
   version "0.0.24"
@@ -8409,12 +8409,7 @@ lodash.uniqby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.uniqby/-/lodash.uniqby-4.7.0.tgz#d99c07a669e9e6d24e1362dfe266c67616af1302"
 
-lodash@4.17.20, lodash@^4.17.4, lodash@^4.6.1:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
-
-lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20:
+lodash@4.17.20, lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.6.1:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
