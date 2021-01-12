@@ -1,14 +1,14 @@
 {
   "name": "ember-cli-lazysizes",
   "version": "0.1.1",
-  "description": "Lazysizes for Ember.js applications.",
+  "description": "Integrate lazysizes.js into Ember.js applications.",
   "keywords": [
     "ember-addon",
     "lazysizes"
   ],
   "repository": "https://github.com/kaliber5/ember-cli-lazysizes",
   "license": "MIT",
-  "author": "Radovan Hajdukovic <hajdukovic.radovan@gmail.com>",
+  "author": "Radovan Hajdukovic <hajdukovic.radovan@gmail.com>, Simon Ihmig <simon.ihmig@kaliber5.de>",
   "directories": {
     "doc": "doc",
     "test": "tests"
